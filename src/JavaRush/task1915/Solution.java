@@ -1,4 +1,4 @@
-package task1915;
+package JavaRush.task1915;
 
 /*
 Дублируем текст

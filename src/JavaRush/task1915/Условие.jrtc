@@ -1,4 +1,4 @@
-taskKey="com.javarush.task.task19.task1915"\n\nДублируем текст
+taskKey="com.javarush.task.task19.JavaRush.task1915"\n\nДублируем текст
 
 Считай с консоли имя файла.
 В методе main подмени объект System.out написанной тобой ридер-оберткой по аналогии с лекцией.
