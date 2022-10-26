@@ -1,12 +1,21 @@
 package LeetCode;
 import LeetCode.LongestPalindromicSubstring.*;
 
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+
 public class Main {
+    static LinkedHashMap<Integer, Integer[]> seats = new LinkedHashMap<>();
+
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        String str = solution.longestPalindrome(
-                "bbqgas");
-        System.out.println(str);
+
+
+
+
+        float d = 2324 % 1;
+        System.out.println(d);
 
 
     }

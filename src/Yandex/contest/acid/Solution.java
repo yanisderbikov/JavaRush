@@ -1,4 +1,4 @@
-package Yandex;
+package Yandex.contest.acid;
 
 import java.util.ArrayList;
 import java.util.Scanner;

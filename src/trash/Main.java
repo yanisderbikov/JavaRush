@@ -1,31 +1,14 @@
 package trash;
 
-public class Main {
-    public static void main(String[] args) {
+import java.util.*;
 
-        EmployeeClass employeeClass = new EmployeeClass("George", 1123);
-        EmployeeRecord employeeRecord = new EmployeeRecord("Mike", 2122);
+public class Main {
+    static LinkedList<Integer> l1 = new LinkedList<>();
+    public static void main(String[] args) {
+        l1.size();
+
+
 
 
     }
 }
-
-//        System.out.println(employeeRecord.nameInUpperCase());
-//
-//
-//        EmployeeRecord.printHello();
-
-
-//        System.out.println(employeeClass);
-//        System.out.println(employeeRecord);
-
-
-//
-//        String nameC = employeeClass.getName();
-//        String nameR = employeeRecord.name();
-////
-
-
-
-//        System.out.println(nameC);
-//        System.out.println(nameR);

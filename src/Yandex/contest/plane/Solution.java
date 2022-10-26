@@ -1,7 +1,6 @@
 package Yandex.contest.plane;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public class Solution {
 
