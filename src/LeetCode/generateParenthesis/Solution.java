@@ -7,31 +7,39 @@ import java.util.Set;
 
 class Solution {
     static Set<String> combinations = new HashSet<>();
-    static Set<Integer[]> comb = new HashSet<>();
     static List<String> list = new ArrayList<>();
     public List<String> generateParenthesis(int n) {
-        List<String> result = new ArrayList<>();
+
         generateOneZero(n - 1); // generated list with possible combinations
-
         for (int i = 0; i < list.size(); i++) {
-
             StringBuilder builder = new StringBuilder("(");
-            String str = convertZeroToParentheses(i);
-            builder.append(str);
-            builder.append(builder.reverse());// разворачиваем и добавляем
+            if (n > 1) {
+                String str = convertZeroToParentheses(i);
+                builder.append(str);
+                builder.append(reverseStr(builder.toString()));
+            } else {
+                builder.append(')');
+            }
+
             combinations.add(builder.toString());
         }
 
         return combinations.stream().toList();
     }
-
+    static String reverseStr(String str){
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < str.length(); i++) {
+            builder.append(str.charAt(i) == '(' ? ')' : '(');
+        }
+        return builder.reverse().toString();
+    }
 
     static String convertZeroToParentheses(int i){
         String s = list.get(i);
         StringBuilder builder = new StringBuilder();
         for (int j = 0; j < s.length(); j++) {
 //             x ? y : z
-            builder.append(s.charAt(i) == '0' ? '(' : ')');
+            builder.append(s.charAt(j) == '0' ? '(' : ')');
         }
         return builder.toString();
     }
