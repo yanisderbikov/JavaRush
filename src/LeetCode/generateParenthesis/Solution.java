@@ -10,37 +10,32 @@ class Solution {
     static Set<Integer[]> comb = new HashSet<>();
     static List<String> list = new ArrayList<>();
     public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<>();
+        generateOneZero(n - 1); // generated list with possible combinations
 
-        for (int i = 0; i < Math.pow(2,n-1); i++) {
+        for (int i = 0; i < list.size(); i++) {
+
             StringBuilder builder = new StringBuilder("(");
-            if (n < 1) {
-                String str = genetateStr(n-1);
-                builder.append(str);
-            }
-            builder.append(builder.reverse().toString());// разворачиваем и добавляем
-            combinations.add(builder);
+            String str = convertZeroToParentheses(i);
+            builder.append(str);
+            builder.append(builder.reverse());// разворачиваем и добавляем
+            combinations.add(builder.toString());
         }
 
-
-
-
-
-
+        return combinations.stream().toList();
     }
-    static String genetateStr(int lSubStr){
-        // нужно использовать на 1 меньше.
-        // метод должен возратить все возможные вариенты комбинаций, но
-        // не повторяясь. Т.е. записывать;
 
-        if (!comb.contains(massive)){
-            comb.add(massive);
-        } else {
-            str = genetateStr(lSubStr);
+
+    static String convertZeroToParentheses(int i){
+        String s = list.get(i);
+        StringBuilder builder = new StringBuilder();
+        for (int j = 0; j < s.length(); j++) {
+//             x ? y : z
+            builder.append(s.charAt(i) == '0' ? '(' : ')');
         }
-        return str;
+        return builder.toString();
     }
-    static String gerateOneZero(int lenght){
-
+    static void generateOneZero(int lenght){
         int n = (int) Math.pow(2, lenght);
         for (int i = 0; i < n; i++) {
             String str = Integer.toBinaryString(i);
