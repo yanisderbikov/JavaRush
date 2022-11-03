@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int n = 2;
+        int n = 3;
 
         var s = solution.generateParenthesis(n);
         pr(s);

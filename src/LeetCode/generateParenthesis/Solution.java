@@ -1,9 +1,6 @@
 package LeetCode.generateParenthesis;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 class Solution {
     static Set<String> combinations = new HashSet<>();
@@ -23,13 +20,19 @@ class Solution {
 
             combinations.add(builder.toString());
         }
+        List<String> strings = combinations.stream().toList();
 
-        return combinations.stream().toList();
+        List<String> reverseList = new ArrayList<>();
+        for (int i = strings.size() - 1; i >= 0 ; i--) {
+            reverseList.add(strings.get(i));
+        }
+        return reverseList;
+
     }
     static String reverseStr(String str){
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            builder.append(str.charAt(i) == '(' ? ')' : '(');
+            builder.append(str.charAt(i) == '(' ? '(' : ')');
         }
         return builder.reverse().toString();
     }
@@ -59,4 +62,5 @@ class Solution {
             }
         }
     }
+
 }
