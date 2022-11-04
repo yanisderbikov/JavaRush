@@ -8,12 +8,14 @@ public class FastSolution {
         }
 
         while (x != 0) {
-            if (x > Math.pow(2, 31) || x < Math.pow(-2, 31)){
+            result = result*10 + x % 10;
+            x /= 10;
+            if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE){
                 return 0;
             }
-            result += x % 10;
-            x /= 10;
         }
         return result;
+        
     }
 }
+
