@@ -2,7 +2,8 @@ package LeetCode._20_parthness;
 
 public class Main {
     public static void main(String[] args) {
-        SolutionMap solution = new SolutionMap();
-        solution.isValid("()");
+        SolutionC solution = new SolutionC();
+        boolean is = solution.isValid("()[]{}");
+        System.out.println(is);
     }
 }

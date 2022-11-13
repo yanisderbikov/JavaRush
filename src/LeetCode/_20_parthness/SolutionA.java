@@ -3,7 +3,7 @@ package LeetCode._20_parthness;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SolutionMap {
+public class SolutionA {
     public boolean isValid(String s) {
         int round = 0;
         int figured = 0;
