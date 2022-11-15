@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Solution {
+    // 15.11.2022 it's really slow solution. Dont try to solve with tha
     public List<List<Integer>> threeSum(int[] nums) {
 //        итерируемся по первому элементу
 //        в этом форе мы ищем пару, которая будет давть target
