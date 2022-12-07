@@ -1,4 +1,4 @@
-package trash;
+package trash.intefaces;
 
 import java.util.Objects;
 

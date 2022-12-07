@@ -1,4 +1,4 @@
-package trash;
+package trash.intefaces;
 
 public record EmployeeRecord (String name, int employeeNumber) implements CanSwim {
 
