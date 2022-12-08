@@ -1,4 +1,4 @@
-package Tinkoff.B;
+package Tinkoff.trainig.B;
 
 import java.util.Scanner;
 
