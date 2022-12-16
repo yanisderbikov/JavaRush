@@ -5,13 +5,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> nums = new ArrayList<>();
-        if (root == null) return null;
-        inorderTraversal(root.)
 
+    public List<Integer> inorderTraversal(TreeNode root) {
+       return null;
 
     }
+
+    public List<Integer> preOrder(TreeNode root, List<Integer> nums){
+
+//        if (root == null) return;
+        nums.add(root.children().hashCode());
+//        cant understand why i cant take 'root.val' ???
+//        preOrder(root.)
+
+    }
+
+
+
+
 }
 //Preorder: Node -> Left -> Right
 //public void preorder(TreeNode root, List<Integer> nums) {
