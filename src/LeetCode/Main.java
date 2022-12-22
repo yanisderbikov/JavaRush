@@ -1,18 +1,11 @@
 package LeetCode;
-import LeetCode.LongestPalindromicSubstring.*;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Objects;
-
+import LeetCode._567_Permution_un_String.*;
 public class Main {
-    static LinkedHashMap<Integer, Integer[]> seats = new LinkedHashMap<>();
 
     public static void main(String[] args) {
-
-
+        Solution sol = new Solution();
+        boolean ds = sol.checkInclusion("abcdef" , "cd");
+        System.out.println(ds);
+        Ha
     }
 }

@@ -8,7 +8,6 @@ public class Solution {
 
     public List<Integer> inorderTraversal(TreeNode root) {
        return null;
-
     }
 
     public List<Integer> preOrder(TreeNode root, List<Integer> nums){
@@ -17,12 +16,8 @@ public class Solution {
         nums.add(root.children().hashCode());
 //        cant understand why i cant take 'root.val' ???
 //        preOrder(root.)
-
+        return null;
     }
-
-
-
-
 }
 //Preorder: Node -> Left -> Right
 //public void preorder(TreeNode root, List<Integer> nums) {
