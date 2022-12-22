@@ -1,6 +1,5 @@
 package LeetCode._19_Remove_Nth_Node_from_End_of_List;
 
-
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode dummy_head = new ListNode(0);
@@ -21,14 +20,19 @@ public class Solution {
         return dummy_head.next;
     }
 }
-class ListNode{
+class ListNode {
     int val;
     ListNode next;
-    ListNode() {}
+
+    ListNode() {
+    }
+
     ListNode(int val) {
         this.val = val;
     }
+
     ListNode(int val, ListNode next) {
-        this.val = val; this.next = next;
+        this.val = val;
+        this.next = next;
     }
 }
