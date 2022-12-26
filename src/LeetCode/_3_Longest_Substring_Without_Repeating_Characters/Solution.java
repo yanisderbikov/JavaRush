@@ -1,4 +1,4 @@
-package LeetCode.WindowSlidingAlgorithm;
+package LeetCode._3_Longest_Substring_Without_Repeating_Characters;
 
 import java.util.HashMap;
 import java.util.Map;

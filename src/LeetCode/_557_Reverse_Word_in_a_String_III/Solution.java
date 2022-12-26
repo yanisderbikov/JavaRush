@@ -22,4 +22,22 @@ public class Solution {
         }
         return null;
     }
+    public String reverseWords2(String s) {
+        int space = -1;
+        char[] arr = s.toCharArray();
+        for (int i = 0; i <= arr.length; i++) {
+            if ( i == arr.length || arr[i] == ' ' ){
+                int left = space + 1;
+                int right = i - 1;
+                while (left < right){
+                    char temp = arr[left];
+                    arr[left++] = arr[right];
+                    arr[right--] = temp;
+                }
+                space = i;
+            }
+        }
+        return String.valueOf(arr);
+    }
+
 }

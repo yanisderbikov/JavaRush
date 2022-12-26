@@ -2,20 +2,20 @@ package LeetCode._35_insertBinaryS;
 
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        int right = nums.length;
+//        if (nums.length == 1) return 0;
         int left = 0;
-        int midpoint = 0;
-
-        while (left < right){
-            midpoint = left + (left + right)/2;
-            if (nums[midpoint] == target) return midpoint;
-            if (nums[midpoint] < target) {
-                left = midpoint + 1;
-            } else {
+        int right = nums.length - 1;
+        if (target > nums[right]) return right + 1;
+        if (target < nums[0]) return 0;
+        while (left <= right){
+            int midpoint = left + (right - left) / 2;
+            if (target == nums[midpoint]) return midpoint;
+            if (target < nums[midpoint]){
                 right = midpoint - 1;
+            } else {
+                left = midpoint + 1;
             }
         }
-        return right;
-
+        return left;
     }
 }
