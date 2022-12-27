@@ -1,6 +1,11 @@
 package LeetCode._695_Max_Area_of_Island;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class Solution {
+    HashMap map = new HashMap<>(Arrays::compare);
+
     int count = 0;
     int ans = 0;
     public int maxAreaOfIsland(int[][] grid) {
