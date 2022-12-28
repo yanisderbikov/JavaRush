@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class Solution {
-    HashMap map = new HashMap<>(Arrays::compare);
 
     int count = 0;
     int ans = 0;
