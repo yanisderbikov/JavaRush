@@ -12,6 +12,16 @@ public class Solution {
         nNode.right = mergeTrees(root1.right, root2.right);
 
         return nNode;
+    }
+    public TreeNode mergeTrees2(TreeNode root1, TreeNode root2) {
+        if (root1 == null) return root2;
+        if (root2 == null) return root1;
 
+        int result = root1.val + root2.val;
+
+        TreeNode left = mergeTrees(root1.left, root2.left);
+        TreeNode right = mergeTrees(root1.right, root2.right);
+
+        return new TreeNode(result, left, right);
     }
 }

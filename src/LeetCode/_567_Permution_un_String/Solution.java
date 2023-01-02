@@ -41,7 +41,7 @@ public class Solution {
                 return true;
             }
             if (right - left == s1.length()
-                    && ch_arr[s2.charAt(left++) ]++ >= 0){
+                    && ch_arr[s2.charAt(left++)]++ >= 0){
                 count_chars++;
             }
         }
@@ -54,11 +54,7 @@ public class Solution {
 
         for (int i = 0; i < s1.length(); i++) {
             char current_char = s1.charAt(i);
-            if (map.containsKey(current_char)){
-                map.put(current_char, map.get(current_char) + 1);
-            }else {
-                map.put(current_char, 1);
-            }
+            map.put(current_char, map.getOrDefault(current_char, 0) + 1);
             count++;
         }
 
@@ -93,6 +89,45 @@ public class Solution {
         }
         return false;
 
+    }
+        // boolean ans=false;
+    public boolean checkInclusion4(String s1, String s2) {
+        if(s2.length()<s1.length()) return false;
+        HashMap<Character,Integer> map = new HashMap<>();
+        HashMap<Character,Integer> tempMap = new HashMap<>();
+        for(int i = 0;i < s1.length();i++){
+            map.put(s1.charAt(i),map.getOrDefault(s1.charAt(i),0)+1);
+        }
+        int left = 0, right = 0;
+        int count_chars = s1.length();
+        while(right < s2.length()){
+            char rightChar = s2.charAt(right);
+            right++;
+
+            if(!map.containsKey(rightChar)){
+                left = right;
+                tempMap.clear();
+            } else{
+                tempMap.put(rightChar, tempMap.getOrDefault(rightChar,0) + 1);
+                while(right - left > count_chars && left < right){
+                    tempMap.put(s2.charAt(left), tempMap.getOrDefault(s2.charAt(left),0) - 1);
+                    if (tempMap.get(s2.charAt(left)) == 0) {
+                        tempMap.remove(s2.charAt(left));
+                    }
+                    left++;
+                }
+                if(right - left == count_chars){
+                    if(map.equals(tempMap)){
+                        return true;
+                    }
+                }
+            }
+        }
+        if(map.equals(tempMap)) return true;
+        return false;
+
+        // fun(s1,0,s2);
+        // return ans;
     }
 }
 
