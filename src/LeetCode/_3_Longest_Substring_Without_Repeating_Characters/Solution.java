@@ -23,4 +23,24 @@ class Solution {
         }
         return maxLenght;
     }
+    // I prefere better that variant
+    public int lengthOfLongestSubstring2(String s) {
+        if (s == null) return 0;
+        if (s.length() == 1) return 1;
+        HashMap<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        int left = -1, right = 0;
+        while (right < s.length()){
+            char currentChar = s.charAt(right);
+//            int index = map.getOrDefault(currentChar, i);
+            if (map.containsKey(currentChar) && map.get(currentChar) > left){
+                int indexFound = map.get(currentChar);
+                left = indexFound;
+            }
+            map.put(currentChar, right);
+            max = Math.max(right - left, max);
+            right++;
+        }
+        return max;
+    }
 }
