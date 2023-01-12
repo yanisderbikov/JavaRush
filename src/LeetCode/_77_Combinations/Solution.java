@@ -1,10 +1,11 @@
 package LeetCode._77_Combinations;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Solution {
-    public List<List<Integer>> combine(int n, int k) {
+    public List<List<Integer>> combine1(int n, int k) {
         List<List<Integer>> ans = new LinkedList();
         if (n < k || k == 0) {
             return ans;
@@ -23,5 +24,21 @@ public class Solution {
         ans.addAll(combine(n-1, k));
 
         return ans;
+    }
+    public static List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> combs = new ArrayList<List<Integer>>();
+        combine(combs, new ArrayList<Integer>(), 1, n, k);
+        return combs;
+    }
+    public static void combine(List<List<Integer>> combs, List<Integer> comb, int start, int n, int k) {
+        if(k==0) {
+            combs.add(new ArrayList<Integer>(comb));
+            return;
+        }
+        for(int i=start;i<=n;i++) {
+            comb.add(i);
+            combine(combs, comb, i+1, n, k-1);
+            comb.remove(comb.size()-1);
+        }
     }
 }
