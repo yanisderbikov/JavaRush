@@ -41,4 +41,23 @@ public class Solution {
             comb.remove(comb.size()-1);
         }
     }
+
+    public List<List<Integer>> combine3(int n, int k) {
+        List<List<Integer>> list = new LinkedList<>();
+        backtrack(list,n,k,1,new ArrayList<Integer>());
+        return list;
+    }
+    private void backtrack(List<List<Integer>> list, int n, int k, int start, List<Integer> tempList){
+        if(k==0) {
+            list.add(new LinkedList<>(tempList));   // условие выхода
+            return;                                 // добавляется
+        }
+        for(int i = start;i<=n-k+1;i++){
+            tempList.add(i);
+            backtrack(list,n,k-1,i+1,tempList);
+            tempList.remove(tempList.size()-1);
+        }
+    }
+
+
 }
