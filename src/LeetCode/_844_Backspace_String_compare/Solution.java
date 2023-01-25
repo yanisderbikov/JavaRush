@@ -3,7 +3,7 @@ package LeetCode._844_Backspace_String_compare;
 public class Solution {
     public boolean backspaceCompare(String S, String T) {
 
-        int S_pointer = S.length() - 1, T_pointer = S.length() - 1;
+        int S_pointer = S.length() - 1, T_pointer = T.length() - 1;
 
         while (S_pointer >= 0 || T_pointer >= 0){
             int S_skips = 0;
