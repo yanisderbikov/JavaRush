@@ -2,15 +2,28 @@ package Algorithms;
 
 import Algorithms.sorting.Solution;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        int[] arr = new int[]{10,12,11,1,3,2,6,5};
-        solution.shaker(arr);
 
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        char[] chars = new char[]{'f', 'd', 'r', 'a', 'b', 'c'};
+
+//        ArrayList<Character> list = new ArrayList<>(){{
+//           add('f');
+//           add('d');
+//           add('r');
+//           add('a');
+//           add('b');
+//           add('c');
+//
+//        }};
+
+        var list = new ArrayList<>(List.of(chars));
+        var l2 = new ArrayList<>(Arrays.asList(new char[]{'f', 'd', 'r', 'a', 'b', 'c'}));
 
     }
 }
