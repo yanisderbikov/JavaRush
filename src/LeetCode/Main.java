@@ -1,8 +1,8 @@
 package LeetCode;
 
 
-import LeetCode._130_Surrounded_Region.Solution
-        ;
+import LeetCode._46_permutations.*;
+
 
 import java.util.Arrays;
 
@@ -13,12 +13,7 @@ public class Main {
     public static void main(String[] args) {
 
         Solution solution = new Solution();
-        solution.solve(new char[][]
-                {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}}
-        );
-        int [] arr = new int[]{1,3,4,6,2};
-        Arrays.sort(arr);
-
+        solution.permute(new int[]{1,2,3});
 
 
     }
