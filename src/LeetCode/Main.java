@@ -12,11 +12,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Solution solution = new Solution();
-        char[] chars = "([{}]{})".toCharArray();
-
-        boolean isTrue = check(chars);
-        System.out.println(isTrue);
+//        Solution solution = new Solution();
+//        char[] chars = "([{}]{})".toCharArray();
+//
+//        boolean isTrue = check(chars);
+//        System.out.println(isTrue);
+        char ch1 = 'A';
+        int res = ch1 - 'A' + 1;
+        System.out.println(res);
 
     }
     private static boolean check(char[] chars){
