@@ -11,16 +11,43 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+//        testMaps();
+        testStrings();
 
-//        Solution solution = new Solution();
-//        char[] chars = "([{}]{})".toCharArray();
-//
-//        boolean isTrue = check(chars);
-//        System.out.println(isTrue);
-        char ch1 = 'A';
-        int res = ch1 - 'A' + 1;
-        System.out.println(res);
+    }
+    private static void testStrings(){
+        String a = "abc";
+        String b = "abc";
+        String aNew = new String("abc");
+        System.out.println(a == b);
+        System.out.println(a == aNew);
 
+
+    }
+    private static void testMaps(){
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            String[] input = scanner.nextLine().split(" ");
+            int key = Integer.parseInt(input[0]);
+            List<Integer> list = new ArrayList<>();
+
+            for (int j = 1; j < input.length; j++) {
+                list.add(Integer.parseInt(input[j]));
+            }
+
+            if (map.containsKey(key)){
+                map.get(key).addAll(list);
+            }else {
+                map.put(key, list);
+            }
+        }
+        List<Integer> resultList = new ArrayList<>();
+        var a = map.entrySet().stream()
+                .flatMap(e -> e.getValue().stream()).toList();
+        var b = map.entrySet().stream()
+                .map(e -> e.getValue().stream()).toList();
+        System.out.println();
     }
     private static boolean check(char[] chars){
         Stack<Character> stack = new Stack<>();
