@@ -22,6 +22,10 @@ public class Main {
 
         double[] d = medianSlidingWindow(arr, k);
 
+        PriorityQueue <Integer> queue = new PriorityQueue<>();
+        var df =queue.offer(1);
+        var s = queue.a
+
     }
     private static String sol1(String s)  {
         char last = s.charAt(0);

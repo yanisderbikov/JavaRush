@@ -19,7 +19,6 @@ class Solution {
             }
             visitedCharacters.put(currentChar, right);
             maxLenght = Math.max(maxLenght, right - left + 1 );
-
         }
         return maxLenght;
     }
