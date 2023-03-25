@@ -2,6 +2,7 @@ package LeetCode;
 
 
 import LeetCode._118_Pascal_triangle.*;
+import LeetCode._39_Combination_Sum.Solution;
 
 
 import java.util.*;
@@ -15,6 +16,8 @@ public class Main {
 //        testStrings();
 //        System.out.println(romanToInt("III"));
 //        int[] arr = {1,3,-1,-3,5,3,6,7};
+        Solution solution = new Solution();
+        solution.combinationSum(new int[]{2, 3, 6, 7}, 7);
         String str = "AAAABBBCCXYZDDDDEEEFFFAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBB";
         System.out.println(sol1(str));
         int[] arr = {1, 4, 2, 3};
@@ -24,7 +27,7 @@ public class Main {
 
         PriorityQueue <Integer> queue = new PriorityQueue<>();
         var df =queue.offer(1);
-        var s = queue.a
+//        var s = queue.a
 
     }
     private static String sol1(String s)  {
