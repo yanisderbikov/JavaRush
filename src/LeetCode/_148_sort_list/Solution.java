@@ -15,7 +15,7 @@ public class Solution {
             fast = fast.next.next;
         }
 
-        prev.next = null;
+        prev.next = null; // its need to devide the l-l
 
         // step 2. sort each half
         ListNode l1 = sortList(head);
