@@ -1,4 +1,4 @@
-package Algorithms.yandexcontests.weekoffer_spring_2023.c;
+package Algorithms.yandexcontests.weekoffer_autumn_2023.c;
 
 
 import java.util.*;
